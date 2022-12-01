@@ -3,7 +3,7 @@ const url=('mongodb://127.0.0.1:27017/');
 const client=new MongoClient(url);
 
 async function main(){
-    client.connect();
+    await client.connect();
     const DatabaseName=client.db('Human_Resource');
     const CollectionName=DatabaseName.collection('employee');
     const data=[
